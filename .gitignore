@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+.vs/
+queue.so
+queue.dylib
+queue.dll
+queue.a
+queue.lib
+queue-test-*
+*.exe
+*.o
+*.obj
+*.lst

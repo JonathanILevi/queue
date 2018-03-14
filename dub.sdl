@@ -1,0 +1,6 @@
+name "queue"
+description "A Queue internally on an SList."
+authors "Jonathan Levi"
+copyright "Copyright © 2018, Jonathan Levi"
+license "cc0"
+targetType	"library"
