@@ -1,6 +1,3 @@
-module queue;
-
-
 /**
 An implemention of a Queue.
 
