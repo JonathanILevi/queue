@@ -96,13 +96,13 @@ class Queue(T) {
 		this._last.next = newLast;
 		this._last = newLast;
 		
-		atomicOp!("+=")(cast(shared)count, 1);
+		count.atomicOp!("+=")(1);
 	}
 
 
 	/**	To be iterable with `foreach` loop.
 	*/
-	bool empty() const {
+	bool empty() {
 		return this.count == 0;
 		////return _head._first == null;
 	}
@@ -111,11 +111,11 @@ class Queue(T) {
 	void popFront() {
 		assert (!this.empty);
 		this._first = this._first.next;
-		(cast(shared)count).atomicOp!("-=")(1);
+		count.atomicOp!("-=")(1);
 	}
 
 	///ditto
-	T front() const {
+	T front() {
 		assert (!this.empty);
 		return this._first.payload;
 		////}
