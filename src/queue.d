@@ -81,7 +81,7 @@ class Queue(T) {
 	}
 
 	private Node* _first;
-	private Node* _last = new Node(null,null);
+	private Node* _last = new Node;
 	shared private int   count = 0;
 
 	this() {
@@ -91,7 +91,7 @@ class Queue(T) {
 	/**	Add to the Queue (to the end).
 	*/
 	void put(T value) {
-		Node* newLast = new Node(null,null);
+		Node* newLast = new Node;
 		this._last.payload = value;
 		this._last.next = newLast;
 		this._last = newLast;
